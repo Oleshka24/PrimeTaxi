@@ -17,7 +17,7 @@
  	 }))
  	 .pipe(plumber())
  	 .pipe(sourcemaps.write('./'))
- 	 .pipe(gulp.dest('./'))
+ 	 .pipe(gulp.dest('./css/'))
  	 .pipe(browserSync.stream());
 
  	done();
