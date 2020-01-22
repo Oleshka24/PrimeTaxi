@@ -82,7 +82,7 @@ input[type="submit"] {
 
 	&__content {
 		min-height: calc(100vh - 8.5rem);
-		padding: 3.5rem;
+		padding: 2.9rem 3.2rem 2.2rem 6.4rem;
 		position: relative;
 		z-index: 0;
 		font-size: 2rem;
@@ -95,8 +95,7 @@ input[type="submit"] {
 			z-index: -1;
 			width: 100%;
 			height: 100%;
-			background-color: $blue;
-			opacity: .7;
+			background-color: $blue + e0;
 		}
 	}
 
@@ -112,7 +111,7 @@ input[type="submit"] {
 			width: 1.5rem;
 			height: 4rem;
 			background-color: $green;
-			left: -2.4rem;
+			left: -3.9rem;
 			top: 2rem;
 		}
 	}
@@ -190,8 +189,8 @@ input[type="submit"] {
 			left: 0;
 			top: 0;
 			z-index: 1;
-			border: 2rem solid $blue;
-			opacity: .7;
+			border: 2rem solid $blue + e0;
+			pointer-events: none;
 		}
 
 		&-img {
@@ -256,7 +255,7 @@ input[type="submit"] {
 		@extend .requirements__heading;
 		width: 50%;
 		margin: 0;
-		padding: 0 1rem;
+		padding: 0;
 
 		&::before {
 			left: -4.3rem;
@@ -281,16 +280,18 @@ input[type="submit"] {
 			border-top: .1rem solid $green;
 		}
 
+		&-icon {
+			transform: translateX(-1rem);
+		}
+
 		&-title {
 			min-height: 5.5rem;
-			padding: 0 1rem;
 			font-size: 2rem;
 			font-weight: 600;
 		}
 
 		&-description {
 			margin-top: 2.6rem;
-			padding: 0 1rem;
 			font-family: Roboto;
 			font-size: 1.9rem;
 			font-weight: 300;
@@ -350,5 +351,352 @@ input[type="submit"] {
 		&-description {
 			@extend .header__form-description;
 		}
+	}
+}
+
+.rent {
+	@extend .requirements;
+
+	&__heading {
+		@extend .requirements__heading;
+		width: 45%;
+		margin-bottom: 4.5rem;
+	}
+
+	&__item {
+		position: relative;
+
+		&::before {
+			@extend .requirements__photo::before;
+			width: calc(100% - 3rem);
+			left: 1.5rem;
+		}
+
+		&-photo {
+			width: 100%;
+			height: 26.3rem;
+		}
+
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&-cont {
+			padding: 3rem 4.5rem 4rem;
+		}
+
+		&-title {
+			margin: 0;
+			font-size: 2.5rem;
+			font-weight: 600;
+		}
+
+		&-list {
+			padding: 1.85rem 0 2.85rem;
+			margin: 0;
+			border-bottom: .1rem solid $green;
+			list-style-type: none;
+		}
+
+		&-li {
+			@extend .requirements__item;
+			padding-left: 1.8em;
+			font-size: 1.9rem;
+
+			&::before {
+				left: 0;
+			}
+		}
+	}
+
+	&__price {
+		margin: 2.5rem 0 3.8rem;
+		display: block;
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: 600;
+	}
+
+	&__btn {
+		width: 100%;
+		height: 5rem;
+		border-width: 0;
+		color: $white;
+		background-color: $green;
+		font-size: 1.9rem;
+	}
+}
+
+.work-procent {
+	@extend .rent;
+
+	&__heading {
+		@extend .rent__heading;
+		width: 100%;
+	}
+
+	&__item {
+		@extend .rent__item;
+
+		&-cont {
+			@extend .rent__item-cont;
+		}
+
+		&-title {
+			@extend .rent__item-title;
+		}
+
+		&-photo {
+			@extend .rent__item-photo;
+		}
+
+		&-img {
+			@extend .rent__item-img;
+		}
+
+		&-list {
+			@extend .rent__item-list;
+		}
+
+		&-li {
+			@extend .rent__item-li;
+		}
+	}
+
+	&__price {
+		@extend .rent__price;
+	}
+
+	&__btn {
+		@extend .rent__btn;
+	}
+
+	&__block {
+		width: 100%;
+		padding: 4.6rem 6.6rem;
+		margin-top: 8rem;
+		color: $white;
+		background-color: $blue;
+	}
+
+	&__title {
+		@extend .buyback__heading;
+		width: 100%;
+		padding: 0;
+	}
+
+	&__list {
+		@extend .requirements__list;
+
+		&-item {
+			@extend .requirements__item;
+
+			&::before {
+				border-color: $white;
+			}
+		}
+	}
+
+	&__description {
+		min-width: 20rem;
+		margin-top: 3.15rem;
+		padding-top: 5rem;
+		border-top: .1rem solid $green;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 2.5rem;
+	}
+}
+
+.testimonals {
+	@extend .buyback;
+
+	&__heading {
+		@extend .work-procent__heading;
+	}
+
+	&__item {
+		width: 100%;
+		min-height: 64rem;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-size: cover;
+		background-position: center;
+
+		&::before {
+			@extend .requirements__photo::before;
+		}
+
+		&--first {
+			background-image: url("../img/reviews/review_1.jpg");
+		}
+
+		&--second {
+			background-image: url("../img/reviews/review_2.jpg");
+		}
+
+		&--third {
+			background-image: url("../img/reviews/review_3.jpg");
+		}
+	}
+
+	&__link {
+		width: 7.2rem;
+		height: 7.2rem;
+		border: .3rem solid $white;
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		font-size: .01rem;
+		text-decoration: none;
+		cursor: pointer;
+
+		&::before {
+			content: "▷";
+			margin: 0 0 .4rem .9rem;
+			color: $white;
+			font-size: 5rem;
+		}
+	}
+
+	&__btn {
+		@extend .rent__btn;
+		margin-top: 2rem;
+	}
+}
+
+.work-start {
+	@extend .call-block;
+
+	&__cont {
+		@extend .call-block__cont;
+		flex-direction: column;
+		background-image: url("../img/photos/fast_start_bg.jpg");
+	}
+
+	&__cont {
+		@extend .call-block__cont;
+	}
+
+	&__heading {
+		@extend .call-block__heading;
+	}
+
+	&__list {
+		padding: 0;
+		margin: 5.4rem 0 0;
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+	}
+
+	&__item {
+		width: 23%;
+		font-size: 2rem;
+		font-weight: 600;
+		position: relative;
+		counter-increment: step-counter;
+
+		&::before {
+			content: counter(step-counter) ".";
+			display: block;
+			font-size: 4.8rem;
+			font-weight: 800;
+			color: $green;
+		}
+
+		&::after {
+			content: "";
+			width: calc(100% - 4.8rem);
+			height: .1rem;
+			position: absolute;
+			right: 0;
+			top: 4.8rem;
+			background-color: $green;
+		}
+	}
+}
+
+.contacts {
+	@extend .testimonals;
+
+	&__heading {
+		@extend .testimonals__heading;
+	}
+
+	&__map {
+		width: 100%;
+		min-height: 44rem;
+		padding-top: 1.5rem;
+
+		&-cont {
+			&::before {
+				@extend .requirements__photo::before;
+			}
+		}
+	}
+}
+
+.footer {
+	&__bar {
+		@extend .header__bar;
+
+		&-cont {
+			@extend .header__bar-cont;
+		}
+	}
+
+	&__list {
+		@extend .header__list;
+	}
+
+	&__item {
+		@extend .header__item;
+
+		&--location {
+			@extend .header__item--location;
+		}
+
+		&--time {
+			@extend .header__item--time;
+		}
+
+		&--phone {
+			@extend .header__item--phone;
+		}
+	}
+
+	&__call-btn {
+		@extend .header__call-btn;
+	}
+
+	&__content {
+		margin: 9.1rem 0 7.4rem;
+	}
+
+	&__heading {
+		margin: 0;
+		font-size: 1.6rem;
+		font-weight: 700;
+	}
+
+	&__info {
+		margin-top: 1rem;
+		display: flex;
+		justify-content:space-between;
+		color: $lightGrey;
+		font-size: 1.3rem;
+		font-weight: 300;
+	}
+
+	&__copyright {
+		text-align: right;
+		color: $black;
 	}
 }
