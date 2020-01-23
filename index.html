@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Prime taxi</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -30,10 +32,13 @@
 					</li>
 				</ul>
 				<button class="header__call-btn">Перезвоните мне</button>
+				<button class="header__nav-btn">
+					<span></span>
+				</button>
 			</div>
 		</section>
 		<section class="header__banner">
-			<div class="container">
+			<div class="header__container container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="header__banner-cont">
@@ -126,7 +131,7 @@
 			</div>
 		</section>
 		<section id="buyback" class="buyback">
-			<div class="container">
+			<div class="buyback__container container">
 				<div class="buyback__content">
 					<h2 class="buyback__heading">Выкуп Prime такси выгоды и условия сотрудничества</h2>
 					<ul class="buyback__list">
@@ -165,7 +170,7 @@
 			</div>
 		</section>
 		<section id="call-block" class="call-block">
-			<div class="container">
+			<div class="call-block__container container">
 				<div class="call-block__cont">
 					<div class="call-block__content">
 						<h2 class="call-block__heading">2 комплекта резины в подарок</h2>
@@ -243,9 +248,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="work-procent__heading">Работа на процентах <br>вы получаете до 52% от заказов Яндекс Такси</h2>
+						<h2 class="work-procent__heading">Работа на проце&shy;нтах <br>вы получаете до 52% от заказов Яндекс Такси</h2>
 					</div>
-					<div class="work-procent__item col-lg-4 offset-2">
+					<div class="work-procent__item col-lg-4 offset-lg-2">
 						<div class="work-procent__item-photo">
 							<img src="img/cars/Nissan_Almera_G15.jpg" alt="Nissan Almera G15" class="work-procent__item-img">
 						</div>
@@ -275,7 +280,7 @@
 							<button class="work-procent__btn">Начать сейчас</button>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="work-procent__container col-lg-6">
 						<div class="work-procent__block">
 							<h3 class="work-procent__title">Мы <br>предоставляем</h3>
 							<ul class="work-procent__list">
@@ -286,7 +291,7 @@
 							<span class="work-procent__description">Наш процент</span>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="work-procent__container col-lg-6">
 						<div class="work-procent__block">
 							<h3 class="work-procent__title">Вы <br>тратите только</h3>
 							<ul class="work-procent__list">
@@ -306,29 +311,33 @@
 					<div class="col-lg-12">
 						<h2 class="testimonals__heading">Отзывы <br>водителей работающих с нами</h2>
 					</div>
-					<div class="col-lg-4">
-						<div class="testimonals__item testimonals__item--first">
-							<a href="#" class="testimonals__link">Просмотреть</a>
+					<div class="col-lg-12">
+						<div class="row">
+							<div class="testimonals__item-cont col-lg-4">
+								<div class="testimonals__item testimonals__item--first">
+									<a href="#" class="testimonals__link">Просмотреть</a>
+								</div>
+							</div>
+							<div class="testimonals__item-cont col-lg-4">
+								<div class="testimonals__item testimonals__item--second">
+									<a href="#" class="testimonals__link">Просмотреть</a>
+								</div>
+							</div>
+							<div class="testimonals__item-cont col-lg-4">
+								<div class="testimonals__item testimonals__item--third">
+									<a href="#" class="testimonals__link">Просмотреть</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="testimonals__item testimonals__item--second">
-							<a href="#" class="testimonals__link">Просмотреть</a>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="testimonals__item testimonals__item--third">
-							<a href="#" class="testimonals__link">Просмотреть</a>
-						</div>
-					</div>
-					<div class="col-lg-4 offset-4">
+					<div class="col-lg-4 offset-lg-4">
 						<button class="testimonals__btn">Начать сейчас</button>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="work-start" class="work-start">
-			<div class="container">
+			<div class="work-start__container container">
 				<div class="work-start__cont">
 					<h2 class="work-start__heading">Как <br>начать работу?</h2>
 					<ol class="work-start__list">
@@ -363,15 +372,15 @@
 				</a>
 				<ul class="footer__list">
 					<li class="footer__item footer__item--location">
-						<span>г.Пенза</span>
+						<span>г.Пенза </span>
 						<span><b>ул. Большая Арбековская д.127</b></span>
 					</li>
 					<li class="footer__item footer__item--time">
-						<span>пн-пт</span>
+						<span>пн-пт </span>
 						<span><b>9:00 -18:00</b></span>
 					</li>
 					<li class="footer__item footer__item--phone">
-						<span>8 (8412) <b>25-29-29</b></span>
+						<span>8 (8412) <b>25-29-29</b> </span>
 						<span>8 (927) <b>375-29-29</b></span>
 					</li>
 				</ul>
