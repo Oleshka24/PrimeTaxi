@@ -11,10 +11,6 @@ body {
 	padding: 0;
 }
 
-section {
-	overflow: hidden;
-}
-
 button,
 input[type="submit"] {
 	cursor: pointer;
@@ -82,6 +78,8 @@ input[type="submit"] {
 	}
 
 	&__banner {
+		overflow: hidden;
+
 		&-cont {
 			color: $white;
 			background-image: url('../img/photos/header_bg.jpg');
@@ -374,6 +372,49 @@ input[type="submit"] {
 		margin-bottom: 4.5rem;
 	}
 
+	&__nav {
+		width: calc(100% + 10.432rem);
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		left: -5.216rem;
+		top: 32.3%;
+		pointer-events: none;
+
+		&-btn {
+			width: 2.216rem;
+			height: 7.01rem;
+			padding: 0;
+			border-width: 0;
+			background-color: transparent;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: .01rem;
+			pointer-events: auto;
+
+			&::before,
+			&::after {
+				content: "";
+				width: .2rem;
+				height: 3.5rem;
+				margin: -.3rem;
+				background-color: $darkGrey;
+			}
+
+			&--prev::before,
+			&--next::after {
+				transform: 	rotateZ(35deg);
+			}
+
+			&--prev::after,
+			&--next::before {
+				transform: 	rotateZ(-35deg);
+			}
+		}
+	}
+
 	&__item {
 		position: relative;
 
@@ -448,6 +489,29 @@ input[type="submit"] {
 		width: 100%;
 	}
 
+	&__nav {
+		@extend .rent__nav;
+
+		&-btn {
+			@extend .rent__nav-btn;
+
+			&::before,
+			&::after {
+				@extend .rent__nav-btn::before, .rent__nav-btn::after;
+			}
+
+			&--prev::before,
+			&--next::after {
+				transform: 	rotateZ(35deg);
+			}
+
+			&--prev::after,
+			&--next::before {
+				transform: 	rotateZ(-35deg);
+			}
+		}
+	}
+
 	&__item {
 		@extend .rent__item;
 
@@ -488,6 +552,7 @@ input[type="submit"] {
 		width: 100%;
 		padding: 4.6rem 6.6rem;
 		margin-top: 8rem;
+		position: relative;
 		color: $white;
 		background-color: $blue;
 	}
@@ -518,6 +583,44 @@ input[type="submit"] {
 		display: inline-block;
 		font-weight: 600;
 		font-size: 2.5rem;
+	}
+
+	&__diagram {
+		margin: 0;
+		font-size: 18rem;
+		background-color: $blue;
+
+		&-block {
+			width: 26.6rem;
+			height: 26.6rem;
+			position: absolute;
+			right: -4.4rem;
+			bottom: -4.3rem;
+			z-index: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			background-color: $white;
+		}
+
+		&:hover > span {
+			color: $blue;
+		}
+
+		& > &-slice > &-bar,
+		& > &-slice > &-fill {
+			border-color: $green;
+		}
+
+		span {
+			min-height: 5.5rem;
+			display: block;
+			font-family: Open Sans;
+			font-size: 3.7rem;
+			font-weight: 800;
+			color: $darkGrey;
+		}
 	}
 }
 
@@ -644,7 +747,7 @@ input[type="submit"] {
 	&__map {
 		width: 100%;
 		min-height: 44rem;
-		padding-top: 1.5rem;
+		padding: 1.5rem;
 
 		&-cont {
 			position: relative;
@@ -906,6 +1009,23 @@ input[type="submit"] {
 			margin-bottom: 3rem;
 		}
 
+		&__nav {
+			width: calc(100% - 10rem);
+			top: 33.7%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			&-btn {
+				width: 1.6rem;
+				height: 5rem;
+
+				&::before,
+				&::after {
+					height: 2.75rem;
+				}
+			}
+		}
+
 		&__item {
 			&-cont {
 				padding-left: 4rem;
@@ -945,6 +1065,22 @@ input[type="submit"] {
 			margin-right: 3.2rem;
 			display: block;
 			text-align: center;
+		}
+
+		&__diagram {
+			font-size: 13.805rem;
+
+			&-block {
+				width: 20.4rem;
+				height: 20.4rem;
+				right: 50%;
+				transform: translateX(50%);
+			}
+
+			span {
+				margin: .6rem;
+				font-size: 2.5rem;
+			}
 		}
 	}
 

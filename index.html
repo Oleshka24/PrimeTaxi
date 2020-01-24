@@ -6,9 +6,19 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<script type="text/javascript" src="libs/jquery.js"></script>
+
 	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
 
+	<link rel="stylesheet" href="libs/owl/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owl/owl.theme.default.min.css">
+	<link rel="stylesheet" href="libs/owl/owl.theme.green.min.css">
+	<script type="text/javascript" src="libs/owl/owl.carousel.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="libs/css-percentage-circle-master/css/circle.css">
+
 	<link rel="stylesheet" href="css/main.min.css">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -250,34 +260,38 @@
 					<div class="col-lg-12">
 						<h2 class="work-procent__heading">Работа на проце&shy;нтах <br>вы получаете до 52% от заказов Яндекс Такси</h2>
 					</div>
-					<div class="work-procent__item col-lg-4 offset-lg-2">
-						<div class="work-procent__item-photo">
-							<img src="img/cars/Nissan_Almera_G15.jpg" alt="Nissan Almera G15" class="work-procent__item-img">
-						</div>
-						<div class="work-procent__item-cont">
-							<h3 class="work-procent__item-title">Nissan Almera G15</h3>
-							<ul class="work-procent__item-list">
-								<li class="work-procent__item-li">График: 5/2, 6/1</li>
-								<li class="work-procent__item-li">Можно чередовать графики</li>
-								<li class="work-procent__item-li">Топливо за счёт парка</li>
-							</ul>
-							<span class="work-procent__price">1150 руб./сутки</span>
-							<button class="work-procent__btn">Начать сейчас</button>
-						</div>
-					</div>
-					<div class="work-procent__item col-lg-4">
-						<div class="work-procent__item-photo">
-							<img src="img/cars/Datsun_on-DO.jpg" alt="Datsun on-DO" class="work-procent__item-img">
-						</div>
-						<div class="work-procent__item-cont">
-							<h3 class="work-procent__item-title">Datsun on-DO</h3>
-							<ul class="work-procent__item-list">
-								<li class="work-procent__item-li">График: 5/2, 6/1</li>
-								<li class="work-procent__item-li">Можно чередовать графики</li>
-								<li class="work-procent__item-li">Топливо за счёт парка</li>
-							</ul>
-							<span class="work-procent__price">1050 руб./сутки</span>
-							<button class="work-procent__btn">Начать сейчас</button>
+					<div class="col-lg-12">
+						<div class="work-procent__carousel row">
+							<div class="work-procent__item col-lg-4 offset-lg-2">
+								<div class="work-procent__item-photo">
+									<img src="img/cars/Nissan_Almera_G15.jpg" alt="Nissan Almera G15" class="work-procent__item-img">
+								</div>
+								<div class="work-procent__item-cont">
+									<h3 class="work-procent__item-title">Nissan Almera G15</h3>
+									<ul class="work-procent__item-list">
+										<li class="work-procent__item-li">График: 5/2, 6/1</li>
+										<li class="work-procent__item-li">Можно чередовать графики</li>
+										<li class="work-procent__item-li">Топливо за счёт парка</li>
+									</ul>
+									<span class="work-procent__price">1150 руб./сутки</span>
+									<button class="work-procent__btn">Начать сейчас</button>
+								</div>
+							</div>
+							<div class="work-procent__item col-lg-4">
+								<div class="work-procent__item-photo">
+									<img src="img/cars/Datsun_on-DO.jpg" alt="Datsun on-DO" class="work-procent__item-img">
+								</div>
+								<div class="work-procent__item-cont">
+									<h3 class="work-procent__item-title">Datsun on-DO</h3>
+									<ul class="work-procent__item-list">
+										<li class="work-procent__item-li">График: 5/2, 6/1</li>
+										<li class="work-procent__item-li">Можно чередовать графики</li>
+										<li class="work-procent__item-li">Топливо за счёт парка</li>
+									</ul>
+									<span class="work-procent__price">1050 руб./сутки</span>
+									<button class="work-procent__btn">Начать сейчас</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="work-procent__container col-lg-6">
@@ -289,6 +303,15 @@
 								<li class="work-procent__list-item">Поддержку</li>
 							</ul>
 							<span class="work-procent__description">Наш процент</span>
+							<div class="work-procent__diagram-block">
+								<div class="work-procent__diagram c100 p48">
+									<span>48%</span>
+									<div class="work-procent__diagram-slice slice">
+										<div class="work-procent__diagram-bar bar"></div>
+										<div class="work-procent__diagram-fill fill"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="work-procent__container col-lg-6">
@@ -300,6 +323,15 @@
 								<li class="work-procent__list-item">Штрафы</li>
 							</ul>
 							<span class="work-procent__description">Ваша прибыль</span>
+							<div class="work-procent__diagram-block">
+								<div class="work-procent__diagram c100 p52">
+									<span>52%</span>
+									<div class="work-procent__diagram-slice slice">
+										<div class="work-procent__diagram-bar bar"></div>
+										<div class="work-procent__diagram-fill fill"></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

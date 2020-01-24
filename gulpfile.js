@@ -25,7 +25,7 @@
 
 function watchFiles() {
 	gulp.watch('scss/*.scss', css_style);
-	gulp.watch('./*.js', browserReload);
+	gulp.watch('./js/*.js', browserReload);
 	gulp.watch('./*.html', browserReload);
 }
 
